@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    text-align: center;
+}
+
+.logo {
+    max-width: 200px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin: 0;
+}
+
+p {
+    font-size: 1.2em;
+    color: #555;
+    margin: 10px 0;
+}
+
+youtube {
+    display: inline-block;
+    margin: 10px 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #e43636;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+twitter {
+    display: inline-block;
+    margin: 10px 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #000000;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+instagram {
+    display: inline-block;
+    margin: 10px 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.2s;
+}
+
+tiktok {
+    display: inline-block;
+    margin: 10px 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #000000;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.2s;
+}
+
+pintrest {
+    display: inline-block;
+    margin: 10px 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #e42f18;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+kitgpt {
+    display: inline-block;
+    margin: 10px 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #348be7;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+a:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+a:active {
+    transform: scale(0.95);
+}
+
+.button.clicked {
+    transform: scale(0.95);
+    opacity: 0.8;
+}
+
+.button img {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
