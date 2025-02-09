@@ -39,18 +39,6 @@ a {
     transition: background-color 0.3s, transform 0.2s;
 }
 
-kitgpt {
-    display: inline-block;
-    margin: 10px 5px;
-    padding: 10px 20px;
-    font-size: 1em;
-    color: white;
-    background-color: #348be7;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s, transform 0.2s;
-}
-
 a:hover {
     background-color: #89b2df;
     transform: scale(1.05);
