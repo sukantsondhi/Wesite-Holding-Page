@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us - We Fix Kits</title>
     <link rel="stylesheet" href="/css/styles.css" />
+    <!-- Updated EmailJS SDK script to a supported version -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="/js/main.js"></script>
   </head>
   <body>
     <header class="header">
@@ -20,11 +23,7 @@
       <section id="contact">
         <h2>Contact Us</h2>
         <div class="translucent-box">
-          <form
-            action="mailto:youremail@example.com"
-            method="post"
-            enctype="text/plain"
-          >
+          <form id="contact-form">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required />
             <label for="email">Email:</label>
@@ -39,7 +38,7 @@
     <footer class="footer">
       <p>
         Contact us:
-        <a href="mailto:contact@wefixkits.com" style="color: blue"
+        <a href="mailto:hello@wefixkits.com" style="color: blue"
           >hello@wefixkits.com</a
         >
       </p>
@@ -61,6 +60,5 @@
         </a>
       </div>
     </footer>
-    <script src="/js/main.js"></script>
   </body>
 </html>

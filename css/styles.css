@@ -1,4 +1,6 @@
-html {
+/* Add this at the top to remove horizontal overflow */
+html, body {
+    overflow-x: hidden;
     height: 100%;
     background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
 }
@@ -7,25 +9,28 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    /* Updated layout for stacking header, content, footer */
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    text-align: center;
-    min-height: 100vh; /* Ensure body takes full height */
+    flex-direction: column;
+    min-height: 100vh;
     background: transparent;
 }
 
 .header {
     width: 100%;
-    background: rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(10px) saturate(180%);
-    -webkit-backdrop-filter: blur(10px) saturate(180%);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(20px) saturate(200%);
+    -webkit-backdrop-filter: blur(20px) saturate(200%);
+    border: 1px solid rgba(255, 255, 255, 0.4);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
+    display: flex;                /* Added */
+    justify-content: center;      /* Added */
+    align-items: center;          /* Added */
+    padding: 0 20px;              /* Optional: adds side padding */
 }
 
 
@@ -53,15 +58,18 @@ body {
     transform: scale(1.05);
 }
 
+/* Updated container to grow and push footer to the bottom */
 .container {
-    margin-top: 80px;
+    margin: 80px auto 0 auto;     /* Center container horizontally */
     padding: 20px;
     width: 100%;
     max-width: 1200px;
+    flex: 1;
     display: flex;
-    flex-direction: column;
+    flex-direction: column;       /* Ensure vertical stacking */
     align-items: center;
     justify-content: center;
+    text-align: center;           /* Center text content */
 }
 
 .logo {
@@ -133,18 +141,14 @@ section {
     margin: 20px 0;
 }
 
+/* Footer modifications: always visible and placed at the bottom */
 footer {
     background: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(10px);
     padding: 20px;
     width: 100%;
     text-align: center;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    -webkit-backdrop-filter: blur(10px) saturate(180%);
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: auto; /* push footer to bottom */
 }
 
 footer p {
@@ -163,6 +167,10 @@ footer .socials {
     border-radius: 10px;
     margin: 20px 0;
     text-align: center;
+    width: 600px;
+    min-height: 400px;
+    padding: 20px;
+    margin: 0 auto;
 }
 
 form {
@@ -188,6 +196,10 @@ form textarea {
     font-size: 1em;
 }
 
+form textarea {
+    height: 150px;
+}
+
 form button {
     padding: 10px 20px;
     font-size: 1em;
@@ -206,4 +218,114 @@ form button:hover {
 
 form button:active {
     transform: scale(0.95);
+}
+
+/* Hamburger menu styles */
+#hamburger-menu {
+    display: none;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1100;
+    cursor: pointer;
+    font-size: 24px;
+    background: rgba(255,255,255,0.8);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Responsive styles for phones */
+@media (max-width: 768px) {
+  /* Removed "display: none" rule for .nav */
+  .nav {
+    display: block;
+    position: relative;
+    background: transparent;
+    padding: 0;
+  }
+
+  /* Adjust nav ul to always show in row or as desired */
+  .nav ul {
+    flex-direction: row;           /* display links in one row */
+    justify-content: space-around; /* evenly space the links */
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    white-space: nowrap; /* Prevent links from wrapping */
+  }
+
+  .nav a {
+    font-size: 1.1em;  /* Increase font size for better readability */
+  }
+
+  .container {
+    padding: 10px 1px; /* Set equal left/right padding */
+  }
+
+  .header {
+    padding: 0 10px; /* reduce side padding */
+  }
+
+  form input,
+  form textarea {
+    max-width: 100%;
+  }
+
+  .logo {
+    max-width: 150px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  .translucent-box {
+    width: 90%;
+    min-height: 300px;
+  }
+
+  /* Reduce spacing between navigation items */
+  .nav li {
+    margin: 0 5px; /* Reduced margin for better fit */
+  }
+
+  /* Center align content for contact and about pages */
+  .container,
+  section,
+  .translucent-box {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Responsive styles for very small mobile screens */
+@media (max-width: 480px) {
+  .header {
+    padding: 0 5px; /* reduce header side padding */
+  }
+  .nav ul {
+    gap: 0.5rem; /* reduce gap between items */
+  }
+  .nav li {
+    margin: 0 2px; /* further reduce margin between navigation items */
+  }
+  .nav a {
+    font-size: 1em; /* slightly reduce font size */
+  }
+}
+
+/* Responsive styles for computers */
+@media (min-width: 769px) {
+  .nav ul {
+    flex-direction: row;
+  }
+
+  /* ...potential additional desktop-specific styles... */
 }
