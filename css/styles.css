@@ -2,7 +2,7 @@
 html, body {
     overflow-x: hidden;
     height: 100%;
-    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    background: linear-gradient(135deg, #000000, #808080, #ffffff);
 }
 
 body {
@@ -13,7 +13,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background: transparent;
+    background: linear-gradient(45deg, #00000077, #808080, #ffffffd2);
 }
 
 .header {
@@ -48,13 +48,13 @@ body {
 
 .nav a {
     text-decoration: none;
-    color: #006fd6;
+    color: #000000;
     font-size: 1.2em;
     transition: color 0.3s;
 }
 
 .nav a:hover {
-    background-color: #8db5e0;
+    background-color: #f8f8f8;
     transform: scale(1.05);
 }
 
@@ -73,7 +73,7 @@ body {
 }
 
 .logo {
-    max-width: 200px;
+    max-width: 400px; /* increased overall logo size from 1000px */
     margin-bottom: 20px;
     border-radius: 50%;
     transition: transform 0.3s, box-shadow 0.3s;
@@ -109,7 +109,7 @@ a {
 }
 
 a:hover {
-    background-color: #cdd7e2;
+    background-color: #f8f8f8;
     transform: scale(1.05);
 }
 
@@ -129,7 +129,7 @@ a:active {
 }
 
 .link {
-    background-color: #0078d7;
+    background-color: #a74545;
     color: #fff;
     padding: 10px 20px;
     border-radius: 4px;
@@ -171,6 +171,14 @@ footer .socials {
     min-height: 400px;
     padding: 20px;
     margin: 0 auto;
+}
+
+.about-box {
+    background: rgba(255, 255, 255, 0.25);  /* translucent white */
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);  /* subtle glass border */
+    padding: 20px;
+    border-radius: 10px;
 }
 
 form {
@@ -274,7 +282,7 @@ form button:active {
   }
 
   .logo {
-    max-width: 150px;
+    max-width: 200px;
   }
 
   h1 {
